@@ -1,16 +1,16 @@
 
         let winner = 0;
+        let compScore = 0;
+        let playerScore = 0;
 
         function getRndInteger(min, max) 
             {
                 return Math.floor(Math.random() * (max - min) ) + min;
             }
-        
         function computerPlay()
           {
             let word = '';
             let num = getRndInteger(1, 4);
-            let word1 = '';
             switch(num)
             {
                 case 1:
@@ -25,7 +25,6 @@
             }
             return word;
           }
-          
         function playRound(compSel, playerSel)
           {
            if(playerSel == "rock" && compSel == "scissors")
@@ -101,8 +100,6 @@
             console.log("It is a draw.");
            }
           }
-          compScore = 0;
-          playerScore = 0;
         function game()
           {
                 let computerSelection = computerPlay();
@@ -110,15 +107,15 @@
                 winner = playRound2(computerSelection, playerSelection);
                 if(winner==1)
                 {
-                    playerScore++;
+                  playerScore++;
                     
                 } else if(winner==0)
                 {
-                    compScore++;
+                  compScore++;
                 }
                     
           }
-         j = 0
+         let j = 0
          while(j<5) 
          {
             game();
