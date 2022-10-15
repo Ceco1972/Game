@@ -104,10 +104,11 @@
           {
                 let computerSelection = computerPlay();
                 let playerSelection = prompt("Please enter Rock, Paper or Scissors: ").toLowerCase();
-
-                while(playerSelection !== "rock" && playerSelection !=="paper" && playerSelection!=="scissors")
+              let choice = ["rock", "paper", "scissors"];
+              while (!choice.includes(playerSelection))
+                //while(playerSelection !== "rock" && playerSelection !=="paper" && playerSelection!=="scissors")
                 {
-                  playerSelection = prompt("Please enter Rock, Paper or Scissors: ").toLowerCase();
+                  playerSelection = prompt("Wrong input. Please enter Rock, Paper or Scissors: ").toLowerCase();
                 }                
                                 
                 winner = playRound2(computerSelection, playerSelection);
