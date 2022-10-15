@@ -105,10 +105,10 @@
                 let computerSelection = computerPlay();
                 let playerSelection = prompt("Please enter Rock, Paper or Scissors: ").toLowerCase();
 
-                // while(playerSelection !== "rock" || playerSelection !=="paper" || playerSelection!=="scissors")
-                // {
-                //   playerSelection = prompt("Please enter Rock, Paper or Scissors: ").toLowerCase();
-                // }                
+                while(playerSelection !== "rock" && playerSelection !=="paper" && playerSelection!=="scissors")
+                {
+                  playerSelection = prompt("Please enter Rock, Paper or Scissors: ").toLowerCase();
+                }                
                                 
                 winner = playRound2(computerSelection, playerSelection);
                 if(winner==1)
